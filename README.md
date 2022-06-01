@@ -8,8 +8,6 @@ LSTM-FCN은 시계열 데이터 분류 작업에서 단순 LSTM보다 더 좋은
 모델 학습 전에 MinMaxScaler를 이용하여 최대 최소 정규화를 진행하였다. 또한 LSTM 블록에서 Dimension Shuffle layer를 통해 train 시간을 단축하였으며 overfitting을 방지하였다.    
 최종 output은 0 (lane keeping), 1 (left lane change), 2 (right lane change)로 세가지이며 이는 input feature와 합쳐져서 Trajectory Prediction 모델로 넘어간다.    
 
-
-
 ## Model Input & Output
 **Input Feature**   
 Ego: Speed, Acceleration, Yaw angle   
@@ -21,8 +19,10 @@ F(Front car): Position x, Position y, Speed, Acceleration
 RB(Rignt Behind car): Position x, Position y, Speed, Acceleration   
 RF(Rignt Front car): Position x, Position y, Speed, Acceleration   
 
-
 **Output**   
 0: lane keeping   
 1: left lane change   
 2: right lane change   
+
+## Model 결과
+<img src="/result.png" width="500px" title="result" alt="result"></img><br/>
